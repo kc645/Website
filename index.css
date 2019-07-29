@@ -105,7 +105,7 @@ header table {
 #top_part tr td{
     width:50%;
 }
-#about {
+#About {
     width:84% !important;
     height:95vh;
     display:flex;
@@ -218,6 +218,15 @@ header table {
     width:92vw;
     padding:6vh 4vw;
     font-weight:bold;
+}
+#Projects {
+    width:84% !important;
+    height:95vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:left;
+    padding:0px 8%;
 }
 #Projects h1 {
     padding:5px 0px;
