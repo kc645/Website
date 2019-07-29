@@ -107,7 +107,7 @@ header table {
 }
 #About {
     width:84% !important;
-    height:95vh;
+    height:40vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -118,14 +118,7 @@ header table {
     font-size:22px;
     word-wrap:break-word;
 }
-#about table {
-    width:70%;
-    margin-top:4vh;
-}
-#about table tr td {
-    width:20% !important;
-    text-align:left;
-}
+
 .social {
     color:rgb(255, 44, 90);
     font-size:23px;
@@ -353,18 +346,19 @@ button:focus {
         width:100%;
         text-align:center;
     }
-    #about {
+
+    #intro {
         width:92% !important;
         height:75vh;
         padding-top:20vh !important;
         text-align:center;
         padding:0px 4%;
     }
-    #about table {
+    #intro table {
         width:100%;
         margin-top:6vh;
     }
-    #about table tr td {
+    #intro table tr td {
         text-align:center;
     }
     .btn_one {
