@@ -233,6 +233,34 @@ header table {
     border-bottom:4px solid rgb(255, 44, 90);
     width:8%;
 }
+#Publications {
+    width:84% !important;
+    height:95vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:left;
+    padding:0px 8%;
+}
+#Publications h1 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(255, 44, 90);
+    width:8%;
+}
+#Patents {
+    width:84% !important;
+    height:95vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:left;
+    padding:0px 8%;
+}
+#Patents h1 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(255, 44, 90);
+    width:8%;
+}
 #contact {
     width:92vw;
     padding:6vh 4vw;
