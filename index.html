@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Andy Choi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <div id="loading">
         <div id="spinner"></div>
@@ -35,10 +39,13 @@
     <table id="top_part">
         <tr>
             <td id="intro" class="animated slideInLeft" style="animation-delay:2s;">
-                <h1>Reinforcement Learning Research Engineer interested in <u>Robotics</u></h1>
-                <button class="btn_one"><a class="color-white" href="/Resume/Kyuwon_Andy_Choi_Resume.pdf" style="color: #000000" download>Resume</a></button><br>
-                <button class="btn_two"><a href="https://www.linkedin.com/in/kyuwon-andy-choi-514758139/" style="color: #000000" target="_blank">LinkedIn</a></button><br>
-                <button class="btn_two"><a href="https://scholar.google.com/citations?user=0dOzgZEAAAAJ&hl=en" style="color: #000000" target="_blank">Google Scholar</a></button><br>
+                <h1>AI Research Engineer interested in <u>Robotics</u> and <u>Reinforcement Learning</u></h1>
+                <button class="btn_one"><a class="color-white" href="/Resume/Kyuwon_Andy_Choi_Resume.pdf"
+                        style="color: #000000" download>Resume</a></button><br>
+                <button class="btn_two"><a href="https://www.linkedin.com/in/kyuwon-andy-choi-514758139/"
+                        style="color: #000000" target="_blank">LinkedIn</a></button><br>
+                <button class="btn_two"><a href="https://scholar.google.com/citations?user=0dOzgZEAAAAJ&hl=en"
+                        style="color: #000000" target="_blank">Google Scholar</a></button><br>
                 <table>
                     <tr>
                         <!--<td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"><i class="fab fa-facebook"></i></a></td>
@@ -50,119 +57,204 @@
                 </table>
             </td>
             <td id="profile" class="animated jackInTheBox" style="animation-delay:2.2s;">
-                <img id="image" src="https://raw.githubusercontent.com/kc645/Website/master/portrait.png" alt="profile"/>
+                <img id="image" src="https://raw.githubusercontent.com/kc645/Website/master/portrait.png"
+                    alt="profile" />
             </td>
         </tr>
     </table>
-    <div id="About">
+    <div id="About" style="margin-top: 50px;">
         <h1>About</h1>
         <p>
-            Hi, my name is Andy Choi and I am currently a Reinforcement Learning Research Engineer @ <a href="http://www.agilesoda.com" target="_blank">AgileSoDA</a> <br>
+            Hi, my name is Andy Choi and I am currently a Reinforcement Learning Research Engineer @ <a
+                href="http://www.agilesoda.com" target="_blank">AgileSoDA</a> <br>
             M.S. in Mechanical Engineering '21 @ <a href="http://www.ucla.edu" target="_blank">UCLA</a> <br>
-            B.S. in Mechanical Engineering '20 Cum Laude @ <a href="www.cornell.edu" target="_blank">Cornell University</a> <br>
+            B.S. in Mechanical Engineering '20 Cum Laude @ <a href="www.cornell.edu" target="_blank">Cornell
+                University</a> <br>
         </p>
     </div>
-    <div id="Projects">
-      <h1>Projects</h1>
-      <p>
-        <li>HAAM-RL</li>
+    <div id="Projects" style="margin-top: 50px;">
+        <h1>Projects</h1>
+        <p>
+            <li>
+                <a href="writeups/haam.html" target="_blank"><b>Heuristic Algorithmm-based Action Masking RL with
+                        Ensembe Inference</b></a>
+                <em>at AgileSoDA</em>
+                <div class="row" style="margin-top: 2%">
+                    <div class="five columns">
+                        <img class="paper-image" src="images/HAAM.PNG" alt="">
+                    </div>
+                    <div class="seven columns" style="margin-top: 2%">
+                        <p>
+                            HAAM-RL Framework using FlexSim and BakingSoDA.<br>
+                        </p>
+                    </div>
+                </div>
+            </li>
 
-        <li>Palletizing</li>
 
-        <li>BASD</li>
+            <li>
+                <a href="writeups/palletizing.html" target="_blank"><b>RL-based Palletizing with a real
+                        manipulator</b></a>
+                <em>at AgileSoDA</em>
+                <div class="row" style="margin-top: 2%">
+                    <div class="five columns">
+                        <img class="paper-image" src="images/Palletizing.png" alt="">
+                    </div>
+                    <div class="seven columns" style="margin-top: 2%">
+                        <p>
+                            RL-based Palletizing System Framework.<br>
+                        </p>
+                    </div>
+                </div>
+            </li>
 
-        <li>ChipNSoDA</li>
+            <li>
+                <a href="writeups/bakingsoda.html" target="_blank"><b>BakingSoDA</b></a>
+                <em>at AgileSoDA</em>
+                <div class="row" style="margin-top: 2%">
+                    <div class="five columns">
+                        <img class="paper-image" src="gifs/basd.gif" alt="">
+                    </div>
+                    <div class="seven columns" style="margin-top: 2%">
+                        <p>
+                            BakingSoDA, a RL MLOps Platform.<br>
+                        </p>
+                    </div>
+                </div>
+            </li>
 
-        <li>263C</li>
+            <li>
+                <a href="writeups/chipnsoda.html" target="_blank"><b>ChipNSoDA</b></a>
+                <em>at AgileSoDA</em>
+            </li>
 
-        <li>LiDAR</li>
+            <li>
+                <a href="writeups/263C.html" target="_blank"><b>Carving Robot Arm Control Simulation</b></a>
+                <em>at University of California, Los Angeles</em>
+                <div class="row" style="margin-top: 2%">
+                    <div class="five columns">
+                        <img class="paper-image" src="gifs/263C.gif" alt="">
+                    </div>
+                    <div class="seven columns" style="margin-top: 2%">
+                        <p>
+                            Carving Robot Arm Control Simulation using MATLAB.<br>
+                        </p>
+                    </div>
+                </div>
+            </li>
 
-        <li>Zed Stereo</li>
-      </p>
+            <li>
+                <a href="writeups/slam_lidar.html" target="_blank"><b>3D SLAM - LIDAR</b></a>
+                <em>at Cornell Autonomous Systems Lab</em>
+
+                <div class="row" style="margin-top: 2%">
+                    <div class="five columns">
+                        <img class="paper-image" src="gifs/slam_lidar.gif" alt="">
+                    </div>
+                    <div class="seven columns" style="margin-top: 2%">
+                        <p>
+                            Real-time 3D SLAM (Simultaneous Localization and Mapping) with a LIDAR and JACKAL.<br>
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+
+            <li>
+                <a href="writeups/slam_zed.html" target="_blank"><b>3D SLAM - ZED Stereo</b></a>
+                <em>at Cornell Autonomous Systems Lab</em>
+                <div class="row" style="margin-top: 2%">
+                    <div class="five columns">
+                        <img class="paper-image" src="gifs/slam_zed.gif" alt="">
+                    </div>
+                    <div class="seven columns" style="margin-top: 2%">
+                        <p>
+                            Real-time 3D SLAM (Simultaneous Localization and Mapping) with a ZED camera and JACKAL.<br>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </p>
     </div>
+
     <div id="Publications">
         <h1>Publications</h1>
         <ul>
-            <li><a href="https://arxiv.org/abs/2403.14110v1"><b><u>Heuristic Algorithm-based Action Masking Reinforcement Learning (HAAM-RL) with Ensemble Inference Method</u></b></a> <br></li> <br>
+            <li><a href="https://arxiv.org/abs/2403.14110v1"><b><u>Heuristic Algorithm-based Action Masking
+                            Reinforcement Learning (HAAM-RL) with Ensemble Inference Method</u></b></a> <br></li> <br>
             <b><u>K.Choi</u></b>, C.Rho, T.Kim, D.Choi <br>
             <em>Arxiv Preprint, March 2024</em> <br>
             <br>
-            
-            <li><a href="https://ieeexplore.ieee.org/document/10202516/"><b><u>Reinforcement Learning Based Pallet Loading Algorithm and its Application to a Real Manipulator System</u></b></a></li></li><br>
+
+            <li><a href="https://ieeexplore.ieee.org/document/10202516/"><b><u>Reinforcement Learning Based Pallet
+                            Loading Algorithm and its Application to a Real Manipulator System</u></b></a></li>
+            </li><br>
             SW Kang, YR Min, <b><u>K. Choi</u></b>, WJ Ahn, SR Baek, DW Choi, MT Lim <br>
             <em>Ubiquitous Robots 2023</em> <br>
         </ul>
-    <div id = "Patents"></div>
+    </div>
+    <div id="Patents">
         <h1>Patents</h1>
         <ul>
-            <li><a href="https://link.kipris.or.kr/link/main/sharePage_KR.jsp?reg_key=4vf3kHqSgV0y30NoItNS5Q==&APPLNO=1020230079965"><b><u>Palletizing System and Method for Controlling the Same</u></b></a> <br></li> <br>
+            <li><a
+                    href="https://link.kipris.or.kr/link/main/sharePage_KR.jsp?reg_key=4vf3kHqSgV0y30NoItNS5Q==&APPLNO=1020230079965"><b><u>Palletizing
+                            System and Method for Controlling the Same</u></b></a> <br></li> <br>
             <b>1026418560000 · Issued Feb 23, 2024</b><br>
             <br>
-            
-            <li><a href="http://kpat.kipris.or.kr/kpat/biblioa.do?method=biblioFrame&start=biblio&searchFg=N&KeyWord=1020220181255&applno=1020220181255&Gubun=1&sCurrPage=1&searchFg=N&expression=1020220181255&openPageId=View01&isMyConcern=N&isMyFolder=N&config=/main/sharePage_KR.jsp,%20className=jeus_jspwork._main._700_sharePage_5fKR_5fjsp,%20jspUri=%27/main/sharePage_KR.jsp"><b><u>Palletizing Reinforcement Learning Apparatus and Method</u></b></a></li></li><br>
+
+            <li><a
+                    href="http://kpat.kipris.or.kr/kpat/biblioa.do?method=biblioFrame&start=biblio&searchFg=N&KeyWord=1020220181255&applno=1020220181255&Gubun=1&sCurrPage=1&searchFg=N&expression=1020220181255&openPageId=View01&isMyConcern=N&isMyFolder=N&config=/main/sharePage_KR.jsp,%20className=jeus_jspwork._main._700_sharePage_5fKR_5fjsp,%20jspUri=%27/main/sharePage_KR.jsp"><b><u>Palletizing
+                            Reinforcement Learning Apparatus and Method</u></b></a></li>
+            </li><br>
             <b>1025510390000 · Issued Jun 29, 2023</b> <br>
             <br>
 
-            <li><a href="https://link.kipris.or.kr/link/main/sharePage_KR.jsp?reg_key=4vf3kHqSgV0y30NoItNS5Q==&APPLNO=1020210190143"><b><u>
-                Reinforcement Learning Apparatus and Method For Optimizing Position of Object Based on Semiconductor Design Data</u></b></a></li></li><br>
+            <li><a
+                    href="https://link.kipris.or.kr/link/main/sharePage_KR.jsp?reg_key=4vf3kHqSgV0y30NoItNS5Q==&APPLNO=1020210190143"><b><u>
+                            Reinforcement Learning Apparatus and Method For Optimizing Position of Object Based on
+                            Semiconductor Design Data</u></b></a></li>
+            </li><br>
             <b>1020210190143 · Issued Jul 6, 2022</b> <br>
             <br>
 
-            <li><a href="http://kpat.kipris.or.kr/kpat/biblioa.do?method=biblioFrame&start=biblio&searchFg=N&KeyWord=1020210190142&applno=1020210190142&Gubun=1&sCurrPage=1&searchFg=N&expression=1020210190142&openPageId=View01&isMyConcern=N&isMyFolder=N&config=/main/sharePage_KR.jsp,%20className=jeus_jspwork._main._700_sharePage_5fKR_5fjsp,%20jspUri=%27/main/sharePage_KR.jsp"><b><u>
-                Apparatus and Method for Reinforcement Learning Based on User Learning Environment in Semiconductor Design</u></b></a></li></li><br>
+            <li><a
+                    href="http://kpat.kipris.or.kr/kpat/biblioa.do?method=biblioFrame&start=biblio&searchFg=N&KeyWord=1020210190142&applno=1020210190142&Gubun=1&sCurrPage=1&searchFg=N&expression=1020210190142&openPageId=View01&isMyConcern=N&isMyFolder=N&config=/main/sharePage_KR.jsp,%20className=jeus_jspwork._main._700_sharePage_5fKR_5fjsp,%20jspUri=%27/main/sharePage_KR.jsp"><b><u>
+                            Apparatus and Method for Reinforcement Learning Based on User Learning Environment in
+                            Semiconductor Design</u></b></a></li>
+            </li><br>
             <b>1020210190142 · Issued Jun 21, 2022</b> <br>
             <br>
         </ul>
+    </div>
     <div id="Contact">
         <h1>Contact</h1>
-            <table>
-                <tr>
-                    <td>
-                        <div id="inner_div">
-                            <table id="inner_table">
-                                <tr>
-                                    <td><i class="fas fa-phone"></i> &nbsp; +82 10 9910 0438</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-at"></i> &nbsp; kwchoi@agilesoda.ai, akchoi@g.ucla.edu, kc645@cornell.edu</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fas fa-map-marker-alt"></i>
+        <table>
+            <tr>
+                <td>
+                    <div id="inner_div">
+                        <table id="inner_table">
+                            <tr>
+                                <td><i class="fas fa-phone"></i> &nbsp; +82 10 9910 0438</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-at"></i> &nbsp; kwchoi@agilesoda.ai, akchoi@g.ucla.edu,
+                                    kc645@cornell.edu</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-map-marker-alt"></i>
                                     <div id="address">
                                         515 East 86th St, #502
                                         New York, NY 10028
                                     </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                  <!--
-                                    <td>
-                                        <a class="social"><i class="fab fa-facebook"></i></a>
-                                        <a class="social"><i class="fab fa-twitter"></i></a>
-                                        <a class="social"><i class="fab fa-instagram"></i></a>
-                                        <a class="social"><i class="fab fa-dribbble"></i></a>
-                                        <a class="social"><i class="fab fa-medium"></i></a>
-                                    </td> -->
-                                </tr>
-                            </table>
-                        </div>
-                    </td>
-                    <td>
-                      <!--
-                        <form>
-                            <input type="text" placeholder="name" required>
-                            <input type="email" placeholder="email" required><br>
-                            <textarea placeholder="your message" required rows="5"></textarea><br>
-                            <button class="btn_one">send</button>
-                        </form> -->
-                    </td>
-                </tr>
-            </table>
-    </div>
-    <!--
-    <div id="footer">
-        made on earth by a human <br> <a href="https://imfunniee.github.io">imfunniee</a> -->
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
     <script src="index.js" type="text/javascript"></script>
 </body>
+
 </html>
