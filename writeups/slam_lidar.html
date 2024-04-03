@@ -13962,7 +13962,7 @@ Adapted from GitHub theme
 
         .rendered_html img,
         .rendered_html svg {
-            max-width: 100%;
+            max-width: 50%;
             height: auto;
         }
 
@@ -16441,6 +16441,13 @@ Adapted from GitHub theme
                 page-break-inside: avoid;
             }
         }
+
+        .writeup-images {
+            max-width: 50%;
+            /* This ensures that the image will not exceed its container's width */
+            height: auto;
+            /* This maintains the aspect ratio of the image */
+        }
     </style>
 
     <!-- Custom stylesheet, it must be in the same directory as the html file -->
@@ -16481,43 +16488,49 @@ Adapted from GitHub theme
                     <div style="text-align: center;">
                         <h1>3D SLAM with Lidar</h1>
                     </div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/U0f8s8dsqsI" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                    <br>
+                    <div style="text-align: center;"><iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/U0f8s8dsqsI" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></div>
                     <div class="text_cell_render border-box-sizing rendered_html">
                         <h2 id="1.-Objective">1. Objective<a class="anchor-link" href="#1.-Objective">&#182;</a></h2>
-                        <p>The objective of this project was to 3D map the fifth floor of Upson Hall with Lidar, ZED
-                            Stereo Camera, and JACKAL. We used RTAB-MAP for integrating the odometry data, depth data,
+                        <p>Upon completion of the SLAM with ZED Camera project, we pursued with SLAM with LiDAR. The
+                            objective of this project was to 3D map the fifth floor of Upson Hall at Cornell University
+                            with Lidar, ZED
+                            Stereo Camera, and JACKAL. The process is similar to the previous project.
+                            We used RTAB-MAP for integrating the odometry data, depth data,
                             and RGB data from the different sensors, and displayed it on RVIZ.</p>
                         <h2 id="2.-Hardware-Setup">2. Hardware Setup<a class="anchor-link"
                                 href="#2.-Hardware-Setup">&#182;</a></h2>
-                        <p><img src="./slam_lidar_images/writeup_img1.png" alt="alt text"></p>
+                        <p><img src="./../images/slam-lidar-setup.png" alt="alt text"></p>
+                        <p>The hardware set up is the same as we used the same JACKAL.</p>
                         <h2 id="3.-System-Setup">3. RQT Graph<a class="anchor-link" href="#3.-System-Setup">&#182;</a>
                         </h2>
-                        <p><img src="./slam_lidar_images/writeup_img2.png" alt="alt text"></p>
+                        <p><img src="./../images/slam-lidar-rqt.png" alt="alt text"></p>
                         <p>This diagram explains how the data from each component gets combined into a 3D map.</p>
                         <h2 id="4.-Screen-Layout">4. Simplified RQT Graph<a class="anchor-link"
                                 href="#4.-Screen-Layout">&#182;</a></h2>
-                        <p><img src="./slam_lidar_images/writeup_img3.png" alt="alt text"></p>
+                        <p><img src="./../images/slam-lidar-simplified-rqt.png" alt="alt text"></p>
                         <p>Obviously, the system can be divided into 3 big components: Lidar, Jackal, and ZED. ZED
                             Camera is added to the system for loop closure detection based on its RGBD image, but it did
                             not improve the system very much. The mapping is basically done with the pose and odometry
                             published from JACKAL with the point clouds published from Lidar. The RTAB-Map software
                             integrates the data from two (or three including ZED) into a 3D map as shown in the
                             demonstration video.</p>
-                        <h2 id="5.-Parameter-Tuning">6. Parameter Tuning<a class="anchor-link"
-                                href="#6.-Parameter-Tuning">&#182;</a></h2>
+                        <h2 id="5.-Parameter-Tuning">5. Parameter Tuning<a class="anchor-link"
+                                href="#5.-Parameter-Tuning">&#182;</a></h2>
                         <p>There were many parameters from ZED Stereo Camera and RTAB-MAP launch files that had been
-                            tuned for sake of better quality in mapping process. The list of the parameters that had
-                            been tuned and the effects of the changes can be found here:</p>
-                        <p>"LINK-will be added soon"</p>
-                        <h2 id="6.-References">7. Mapped Area<a class="anchor-link" href="#7.-References">&#182;</a>
+                            tuned for sake of better quality in mapping process. We went through rigorous trial and
+                            error to produce the best map as possible. </p>
+                        <h2 id="6.-Mapped-Area">6. Mapped Area<a class="anchor-link" href="#7.-References">&#182;</a>
                         </h2>
-                        <p><img src="./slam_lidar_images/writeup_img4.png" alt="alt text"></p>
-                        <h2 id="6.-Supplementary Materials">8. Supplementary Materials</h2>
+                        <p><img src="./../images/slam-lidar-mapped-area.png" alt="alt text"></p>
+                        <h2 id="7.-Supplementary Materials">7. Supplementary Materials</h2>
                         <p><a class="color-white" href="/documents/3d_mapping_lidar.pptx" download="">PowerPoint
                                 File</a></p>
-                        <h2 id="7.-References">9. Reference<a class="anchor-link" href="#7.-References">&#182;</a></h2>
+                        <p>The presentation slide can be found above.</p>
+                        <h2 id="8.-References">8. Reference<a class="anchor-link" href="#7.-References">&#182;</a></h2>
                         <p><a
                                 href="http://wiki.ros.org/rtabmap_ros/Tutorials/HandHeldMapping">http://wiki.ros.org/rtabmap_ros/Tutorials/HandHeldMapping</a>
                             <a
