@@ -109,7 +109,8 @@ header table {
 }
 #About {
     width:84% !important;
-    height:40vh;
+    /* Remove fixed height */
+    /* height:40vh; */
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -175,17 +176,24 @@ header table {
     color:#fff;
     background:rgb(255, 44, 90);
 }
+.paper-image {
+    width: 100%; /* Ensure images take full width of parent */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set maximum width */
+    max-height: 600px; /* Set maximum height */
+}
+
 #profile {
     width: 100%;
     height: 95vh;
     text-align: center;
-  }
+}
   
-  #image {
+#image {
     border-radius: 50%;
     width: 450px;
     height: 450px;
-  }
+}
 
 #work {
     width:92vw;
@@ -221,7 +229,8 @@ header table {
 }
 #Projects {
     width:84% !important;
-    height:95vh;
+    /* Remove fixed height */
+    /* height:95vh; */
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -235,7 +244,8 @@ header table {
 }
 #Publications {
     width:84% !important;
-    height:95vh;
+    /* Remove fixed height */
+    /* height:95vh; */
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -249,7 +259,8 @@ header table {
 }
 #Patents {
     width:84% !important;
-    height:95vh;
+    /* Remove fixed height */
+    /* height:95vh; */
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -261,19 +272,19 @@ header table {
     border-bottom:4px solid rgb(255, 44, 90);
     width:8%;
 }
-#contact {
+#Contact {
     width:92vw;
     padding:6vh 4vw;
 }
-#contact h1 {
+#Contact h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(255, 44, 90);
-    width:10%;
+    width:8%;
 }
-#contact table {
+#Contact table {
     width:100%;
 }
-#contact table tr td {
+#Contact table tr td {
     width:50%;
 }
 #inner_div table{
@@ -285,10 +296,10 @@ header table {
 #inner_table tr td{
     padding:10px 20px !important;
 }
-#contact form {
+#Contact form {
     width:100%;
 }
-#contact form input {
+#Contact form input {
     width:96%;
     margin:20px 1%;
     background:transparent;
@@ -301,7 +312,7 @@ header table {
     color:#000;
     font-weight:bold;
 }
-#contact form textarea {
+#Contact form textarea {
     width:96%;
     margin:20px 1%;
     padding:8px 10px;
@@ -316,11 +327,11 @@ header table {
     color:#000;
     font-weight:bold;
 }
-#contact form input:focus {
+#Contact form input:focus {
     outline:none;
     border-bottom:3px solid rgba(255, 44, 90,1);
 }
-#contact form textarea:focus {
+#Contact form textarea:focus {
     outline:none;
     border-bottom:3px solid rgba(255, 44, 90,1);
 }
@@ -420,17 +431,17 @@ button:focus {
         box-shadow:0px 10px 40px rgba(255, 44, 90, 0.8);
         cursor:pointer;
     }
-    #contact table tr td {
+    #Contact table tr td {
         width:100%;
         display:block;
     }
     #inner_table tr td{
         padding:10px 0px !important;
     }
-    #contact form input {
+    #Contact form input {
         width:90%;
     }
-    #contact form textarea {
+    #Contact form textarea {
         width:90%;
     }
     #work h1 {
@@ -439,7 +450,7 @@ button:focus {
     #bio h1 {
         width:25%;
     }
-    #contact h1 {
+    #Contact h1 {
         width:33%;
     }
     header {
