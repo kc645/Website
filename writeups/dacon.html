@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Carving Robot Simulation</title>
+    <title>AI Contest</title>
     <link rel="shortcut icon" href="/images/shortcut.jpg" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -16497,29 +16497,32 @@ Adapted from GitHub theme
                 </div>
                 <div class="inner_cell">
                     <div style="text-align: center;">
-                        <h1>Carving Robot Arm Control Simulation</h1>
+                        <h1>Block Toy Manufacturing Process Optimization AI Contest</h1>
                     </div>
                     <br>
-                    <div style="text-align: center;">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nihArZl8k4I" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-
                     <div class="text_cell_render border-box-sizing rendered_html">
                         <h2 id="1.-Objective">1. Objective<a class="anchor-link" href="#1.-Objective">&#182;</a></h2>
-                        <p>Throughout my Masters degree, I took a series of robotics course. Normally, the last course,
-                            Control of Robotic Systems, requires building a physical robot and control for the final
-                            project.
-                            However, due to COVID-19, all classes were held online, meaning it wasn't possible to
-                            physically create a robot.
-                            The alternative was to control the robot in simulation.
-                        <h2 id="2.-Robot">2. Robot<a class="anchor-link" href="#2.-Hardware-Setup">&#182;</a></h2>
+                        <p>
+                            The AI Contest hosted by Dacon and LG.
+                            <li><b>Background information</b>:
+                                With the increased demand for block toys before and after Children's Day, we aim to
+                                improve
+                                manufacturing process efficiency.
+                                Utilizing AI-based approaches, we seek to develop process design algorithms for timely
+                                and
+                                adequate production. </li>
+                            <li><b>Objective</b>: Optimization of block toy manufacturing processes using artificial
+                                intelligence (AI)</li>
+                            <li>
+                                <b>Competition Description</b>:
+                                Design optimal block toy production processes to meet specified demand.
+                                Develop process plans using AI-based algorithms and submit them in a CSV file.
+                            </li>
+
                         </p>
-                        <div class="image-container">
-                            <img src="./../images/263c-robot.png" alt="alt text">
-                            <img src="./../images/263c-robot-2.png" alt="alt text">
-                        </div>
+                        <h2 id="2.-Data Preprocessing">2. Data Preprocessing<a class="anchor-link"
+                                href="#2.-Data Preprocessing">&#182;</a></h2>
+                        </p>
                         <p>During the earlier course in 263A, Kinematics of Robotics, we designed our robot, named RTiST
                             as shown above.
                             The operating mechanism is similar to a commercial 3D printer mounted on a gantry frame.
@@ -16527,8 +16530,8 @@ Adapted from GitHub theme
                             is
                             controlled by the 2 revolute joints of the 2-link planar arm.
                         </p>
-                        <h2 id="3.-Control Methods">3. Control Algorithms<a class="anchor-link"
-                                href="#3.-System-Setup">&#182;</a>
+                        <h2 id="3.-MDP Formulation">3. MDP Formulation<a class="anchor-link"
+                                href="#3.-MDP Formulation">&#182;</a>
                         </h2>
                         <div class="image-container">
                             <img src="./../images/263c-joint.png" alt="alt text">
@@ -16547,8 +16550,8 @@ Adapted from GitHub theme
                             original position, the robot then moves up using Joint Space Inverse Dynamics Control, then
                             the cube is re-positioned; this concludes the first carving line segment. Then, this process
                             repeats until the end.</p>
-                        <h2 id="4.-Implementation">4. Implementation<a class="anchor-link"
-                                href="#4.-Implementation">&#182;</a></h2>
+                        <h2 id="4.-Hyperparameter Tuning">4. Hyperparameter Tuning<a class="anchor-link"
+                                href="#4.-Hyperparameter Tuning">&#182;</a></h2>
                         <p>Since this project was done in simulation, many assummptions had to be considered.
                             1) The robot moves along the y direciton with no friction. 2) The end effector's x and y
                             positions are fixed. 3) The parameters for the robot and the motors are from Solidworks and
@@ -16572,12 +16575,9 @@ Adapted from GitHub theme
                             errors, which showed stability.
                         </p>
                         <h2 id="5.-Results">5. Result<a class="anchor-link" href="#4.-Results">&#182;</a></h2>
-                        <p>The result is shown in the video above. </p>
+                        <p>Placed 3rd out of approximately 100 teams. </p>
                         <h2 id="6.-Supplementary Materials">6. Supplementary Materials</h2>
-                        <p><a class="color-white" href="/documents/3d_mapping_lidar.pptx" download="">PowerPoint
-                                File</a></p>
-                        <p>The presentation slide can be found above.</p>
-                        <p><a class="color-white" href="/documents/263C_Report.pdf" download="">Final Report</a></p>
+                        <p><a class="color-white" href="/documents/Dacon_Report.pdf" download="">Final Report</a></p>
                         <p>The final report can be found above.</p>
 
                     </div>
