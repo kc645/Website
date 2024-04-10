@@ -16523,56 +16523,65 @@ Adapted from GitHub theme
                         <h2 id="2.-Data Preprocessing">2. Data Preprocessing<a class="anchor-link"
                                 href="#2.-Data Preprocessing">&#182;</a></h2>
                         </p>
-                        <p>During the earlier course in 263A, Kinematics of Robotics, we designed our robot, named RTiST
-                            as shown above.
-                            The operating mechanism is similar to a commercial 3D printer mounted on a gantry frame.
-                            The two prismatic joints control the x, y position of the end-effector, and the z position
-                            is
-                            controlled by the 2 revolute joints of the 2-link planar arm.
+                        <p>We focused on three aspects in the given data files: order, max count, and stock. We
+                            preprocessed the data using Python pandas. Initially, we standardized the data, but found
+                            the performance unsatisfactory, so we decided to normalize the data instead. Additionally,
+                            since the data is time series data, we added a variable reflecting this by incorporating a
+                            30-day window. Finally, we used Samplesubmission.csv to format and insert the resulting
+                            values according to the specified format.
                         </p>
-                        <h2 id="3.-MDP Formulation">3. MDP Formulation<a class="anchor-link"
-                                href="#3.-MDP Formulation">&#182;</a>
+                        <h2 id="3.-Hierarchical RL multi model">3. Hierarchical RL multi model<a class="anchor-link"
+                                href="#3.-Hierarchical RL multi model">&#182;</a>
                         </h2>
-                        <div class="image-container">
-                            <img src="./../images/263c-joint.png" alt="alt text">
-                            <img src="./../images/263c-hybrid.png" alt="alt text">
-                        </div>
-                        <p>We used two types of control algorithms: <b>Hybrid Force/Motion Control</b> and <b>Joint
-                                Space Inverse Dynamics Control</b>. The algorithm flow diagram is shown below.
+                        <p>
+                            Broadly, we utilized two main models, further categorized into a total of five models. The
+                            first model is the check model.
+
+                            In the check model, the states consist of inventory, inQueue, and orders. The "inQueue"
+                            variable refers to the blocks waiting to be produced.
+
+                            The actions are discrete actions, where for each line, there are a total of 16 possible
+                            action combinations such as (check 1, check 1), (check 1, check 2), and so on.
+
+                            The rewards are determined based on the function outlined in the competition rules. Through
+                            various attempts, we concluded that block 2 had a significant impact on the scores.
+                            Therefore, we excluded block 2 from the schedule and included only blocks 1, 3, and 4 in the
+                            reward function.
+
+                            When creating the check model, we aimed for diverse actions. For checks, we set the time to
+                            a minimum of 28 hours, and for processes, we set it to a minimum of 98 hours. Once this
+                            first model is completed, schedules for checks and processes are generated.
+
+                            The second model is called the process model. Here, we use one process model for each block,
+                            resulting in a total of four models. The states of these models include inventory, inQueue,
+                            and orders for each block after scheduling from the check model. Additionally, they include
+                            whether the processes are conducted simultaneously or separately on the two lines.
+
+                            The actions in the process model are discrete actions, either 0 or the maximum value
+                            obtained from maxcount.csv. This represents the number of parts produced for each process
+                            pair. To reduce the number of actions, we only used two values.
+
+                            Similar to the check model, the reward function for the process model was determined
+                            according to the function outlined in the competition rules.
                         </p>
-                        <p><img src="./../images/263c-algorithm-flow.png" alt="alt text"></p>
-                        <p>The robot is placed at an initial
-                            position. Then, using <b>Joint Space Inverse Dynamics Control</b>, the arm moves down to the
-                            top of
-                            the block. Once the milling tip reaches the top of the block, the robot uses <b>Hybrid
-                                Force/Motion Control</b> to carve back and forth of the line segment. Once it comes back
-                            to the
-                            original position, the robot then moves up using Joint Space Inverse Dynamics Control, then
-                            the cube is re-positioned; this concludes the first carving line segment. Then, this process
-                            repeats until the end.</p>
                         <h2 id="4.-Hyperparameter Tuning">4. Hyperparameter Tuning<a class="anchor-link"
                                 href="#4.-Hyperparameter Tuning">&#182;</a></h2>
-                        <p>Since this project was done in simulation, many assummptions had to be considered.
-                            1) The robot moves along the y direciton with no friction. 2) The end effector's x and y
-                            positions are fixed. 3) The parameters for the robot and the motors are from Solidworks and
-                            from the instructions of the MX-28A motor. 4) The wood used for carving is Cedar, Northern
-                            White wood, with the Young's modulus of 4400 MPa.
-                        </p>
                         <p>
-                            The initial and final angles are calculated from inverse kinematics of two revolute planar
-                            arm, which are then inserted as inputs to the control algorithm. The trajectories have been
-                            calculated with a trapezoidal velocity profile. Different values for PID gains were tested
-                            with different angular velocities.
-                        </p>
-                        <p>
-                            The robot is carving the block by 1 cm as
-                            it travels in the y-direction. From the video, the bottom left of the simulation shows the
-                            trajectory of how
-                            the block is being carved; the red line indicates the path that the robot carving is
-                            following. After the robot carves by 20 cm, it carves back by 20 cm to come back to the
-                            original position. Then, the robot arm moves up to complete the algorithm mentioned above.
-                            With the desired contact force, PID gains were calculated and showed minimal velocity
-                            errors, which showed stability.
+                            After trying various algorithms, we used the SMAC algorithm for hyperparameter tuning and
+                            the PPO (Proximal Policy Optimization) algorithm for reinforcement learning.
+
+                            In the check model, the input data is fed, and the agent takes actions accordingly. These
+                            actions lead to a new state, where order, stock, and inQueueMol are updated. The agent
+                            observes this new state and takes appropriate actions until the process is completed.
+
+                            Once training is complete, schedules are generated, and this leads to the training of
+                            process models for each block. Initially, a single process model was used, but later it was
+                            divided into four models to improve performance and create block-specific models.
+
+                            For instance, when training the process model for Block 1, only schedules where Check 1 is
+                            active are considered. Similarly, for Check 2, the process model for Block 2 is executed.
+                            Just like the check model, the agent takes actions based on incoming data, receives the next
+                            state (new order, stock, inQueue), and repeats the process of taking appropriate actions.
                         </p>
                         <h2 id="5.-Results">5. Result<a class="anchor-link" href="#4.-Results">&#182;</a></h2>
                         <p>Placed 3rd out of approximately 100 teams. </p>
